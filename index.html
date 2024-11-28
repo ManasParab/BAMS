@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAMS - Backend Attendance Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">BAMS</div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How it Works</a>
+                <a href="#tech-stack">Tech Stack</a>
+                <a href="#contact" class="cta-button">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Location-Based Attendance Management Made Simple</h1>
+                <p>Streamline your attendance tracking with our innovative mobile solution using geo-fencing technology</p>
+                <div class="cta-buttons">
+                    <a href="#download" class="primary-button">
+                        <i class="fas fa-download"></i> Download App
+                    </a>
+                    <a href="#demo" class="secondary-button">
+                        <i class="fas fa-play"></i> Watch Demo
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://via.placeholder.com/300x600/2196F3/FFFFFF?text=BAMS+App" alt="BAMS App Interface">
+            </div>
+        </div>
+    </header>
+
+    <section id="features">
+        <div class="container">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Geo-Fencing</h3>
+                    <p>Precise location tracking with altitude, latitude, and longitude verification</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Secure Authentication</h3>
+                    <p>Powered by Firebase Authentication for reliable user management</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Real-time Tracking</h3>
+                    <p>Instant attendance marking and synchronization</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Cross-platform</h3>
+                    <p>Works seamlessly on all Android devices</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="alternate-bg">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Host Setup</h3>
+                    <p>Administrator sets up the attendance zone using the host device</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>User Check-in</h3>
+                    <p>Users open the app within the designated area</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Location Verification</h3>
+                    <p>App compares user's location with host coordinates</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Attendance Marked</h3>
+                    <p>Automatic attendance recording upon successful verification</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tech-stack">
+        <div class="container">
+            <h2>Technology Stack</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <img src="https://via.placeholder.com/80x80/2196F3/FFFFFF?text=Java" alt="Java">
+                    <span>Java</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://via.placeholder.com/80x80/FF8F00/FFFFFF?text=Firebase" alt="Firebase">
+                    <span>Firebase</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://via.placeholder.com/80x80/4CAF50/FFFFFF?text=OSM" alt="OpenStreetMaps">
+                    <span>OpenStreetMaps</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://via.placeholder.com/80x80/9C27B0/FFFFFF?text=MD3" alt="Material Design 3">
+                    <span>Material Design 3</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BAMS</h3>
+                    <p>Making attendance management smarter and more efficient</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: info@bams.com</p>
+                    <p>Phone: +1 234 567 890</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BAMS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.querySelector('i').classList.toggle('fa-bars');
+            mobileMenuBtn.querySelector('i').classList.toggle('fa-times');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+                mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+            }
+        });
+    </script>
+</body>
+</html> 
